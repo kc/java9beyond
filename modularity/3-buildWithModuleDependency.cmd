@@ -2,6 +2,8 @@
 rmdir /Q /S output
 mkdir output\mlib
 
+REM with intermediary jar; now the directoryname and modulename do not have to match
+
 mkdir output\classes
 dir /s /B first\*.java > sources.txt
 javac -d output/classes @sources.txt
