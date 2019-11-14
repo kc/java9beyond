@@ -1,5 +1,5 @@
-REM classic style sources without module-info.java
 @echo off
+REM classic style sources without module-info.java
 rmdir /Q /S output
 mkdir output\mlib
 
