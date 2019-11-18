@@ -1,3 +1,3 @@
-// module secondmodulename { // 3a
-//     // requires first; //3b
+// module secondmodule { // 3a
+//     requires first; //3b
 // }

@@ -1,6 +1,6 @@
 package com.example.second;
 
-// import com.example.first.First; // 2a
+// import com.example.first.First;
 
 public class Second {
 
@@ -14,6 +14,9 @@ public class Second {
         // 2b
         // System.out.println("Second.class.getModule() is: " + Second.class.getModule());
         // System.out.println();
+
+        // or use: (when demoing removal of jar at runtime)
+        // new Helper().doeIets();
     }
 
 }
