@@ -1,5 +1,5 @@
 @echo off
-REM module sources with module-info.java (start without requires/exports) and dependency and therefore p instead of cp at java and java
+REM sources with module-info.java (start without requires/exports) and dependency and therefore p instead of cp at javac and java
 rmdir /Q /S output
 mkdir output\mlib
 
@@ -13,10 +13,10 @@ del sources.txt
 mkdir output\classes
 dir /s /B second\*.java > sources.txt
 javac -d output/classes -p output\mlib\first.jar @sources.txt
-jar -c -f output/mlib/second.jar -C output/classes .
+jar -c -f output/mlib/secondauto.jar -C output/classes .
 rmdir /Q /S output\classes
 del sources.txt
 
 REM with -p all jar names can be omitted :-); prefix main class with (named) module name
-java -p output\mlib -m secondmodulename/com.example.second.Second 
-REM with intermediary jar; the directoryname and modulename do not have to match; hence secondmodulename instead of second (recompile with secondmodulename in module-info)
+java -p output\mlib -m secondmodule/com.example.second.Second 
+REM with intermediary jar; the directoryname and modulename do not have to match; hence secondmodule instead of secondauto (recompile with secondmodule in module-info)
