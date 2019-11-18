@@ -17,5 +17,5 @@ jar -c -f output/mlib/second.jar -C output/classes .
 rmdir /Q /S output\classes
 del sources.txt
 
-
+echo -------------- Running in the classpath ------------------------------------
 java -cp output\mlib\first.jar;output\mlib\second.jar com.example.second.Second

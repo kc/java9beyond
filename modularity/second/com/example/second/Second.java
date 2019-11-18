@@ -1,12 +1,19 @@
 package com.example.second;
 
-import com.example.first.First;
+// import com.example.first.First; // 2a
 
 public class Second {
 
     public static void main(String[] args) {
-        First first = new First();
-        System.out.println("starting second... " + first.getInfo());
-        System.out.println("Module is: " + Second.class.getModule());
+        System.out.println("Starting second..."); // 1
+
+        // 2a
+        // First first = new First();
+        // System.out.println("First info: " + first.getInfo());
+
+        // 2b
+        // System.out.println("Second.class.getModule() is: " + Second.class.getModule());
+        // System.out.println();
     }
+
 }

@@ -17,17 +17,17 @@ jar -c -f output/mlib/second.jar -C output/classes .
 rmdir /Q /S output\classes
 del sources.txt
 
-echo Running in the classpath ----------------------
+echo -------------- Running in the classpath ------------------------------------
 java -cp output\mlib\first.jar;output\mlib\second.jar com.example.second.Second rem now with -cp
 
-
-
-REM -d examines metadata of module graph
-jar -f output\mlib\first.jar -d 
-jar -f output\mlib\second.jar -d 
-
-echo Running in the modulepath using automatic module name -------
+echo -------------  Running in the modulepath using automatic module name -------
 java -p output\mlib -m second/com.example.second.Second
 
 REM when running classic jar in the modulepath, jar becomes module with automatic name == jar name
 REM for java.exe prefix main class with automatic module name
+
+REM -d examines metadata of module graph (2b)
+echo --- Module data of first is: ---
+jar -f output\mlib\first.jar -d 
+echo --- Module data of second is: ---
+jar -f output\mlib\second.jar -d 
