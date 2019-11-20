@@ -8,7 +8,7 @@ public class Second {
         System.out.println("Starting second..."); // 1
 
         // 2a
-        // First first = new First();
+        // First first = new First(); // with requires static, this will compile but this will not run!
         // System.out.println("First info: " + first.getInfo());
 
         // 2b
@@ -16,7 +16,7 @@ public class Second {
         // System.out.println();
 
         // or use: (when demoing removal of jar at runtime)
-        // new Helper().doeIets();
+        // new com.example.second.helper.Util().doeIets();
     }
 
 }
