@@ -1,6 +1,6 @@
 @echo off
 REM classic style without module-info.java but with dependency and therefore -cp needed
-rmdir /Q /S output
+rmdir /Q /S output\mlib
 mkdir output\mlib
 
 mkdir output\classes

@@ -1,6 +1,6 @@
 @echo off
 REM sources with module-info.java (start without requires/exports) and dependency and therefore p instead of cp at javac and java
-rmdir /Q /S output
+rmdir /Q /S output\mlib
 mkdir output\mlib
 
 mkdir output\classes

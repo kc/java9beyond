@@ -13,3 +13,5 @@
 			java -p output\mlib -m second/com.example.second.Second
 		vroeger: at runtime op een bepaald moment crash (tonen via aanroep helpen , build met 2 en first verwijderen)
 		nu: tijdens opstarten second al meteen fout: tonen via build met 3 en jar verwijderen)
+
+- Demo jlink voor non-modular: run 1-..., jlink-build en jlink-run.

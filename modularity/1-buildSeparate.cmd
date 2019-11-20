@@ -1,6 +1,6 @@
 @echo off
 REM classic style sources without module-info.java
-rmdir /Q /S output
+rmdir /Q /S output\mlib
 mkdir output\mlib
 
 mkdir output\classes

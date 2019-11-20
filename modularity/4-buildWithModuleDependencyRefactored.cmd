@@ -1,5 +1,5 @@
 @echo off
-rmdir /Q /S output
+rmdir /Q /S output\classes
 mkdir output\classes
 
 REM without intermediary jar; now the directoryname and modulename should match! hence first,second instead of -auto or -named
