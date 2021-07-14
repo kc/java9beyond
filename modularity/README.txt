@@ -28,9 +28,14 @@
 	    A: vroeger: ooit at runtime een crash, pas als de foute code uitgevoerd wordt
            nu: tijdens opstarten app second al meteen een fout
         Demo:
-            build met 2-...cmd
-            remove first.jar
-            run second met: java -p output\mlib -m second/com.example.second.Second
+            vroeger
+                build met 2-...cmd
+                remove firstauto.jar
+                run second met: java -p output\mlib -m secondauto/com.example.second.Second
+            nu
+                build met 3-...cmd
+                remove first.jar
+                run second met: java -p output\mlib -m secondnamed/com.example.second.Second
 
 - Demo jlink voor non-modular: run
     - 1-...cmd,
