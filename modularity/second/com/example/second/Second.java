@@ -1,21 +1,18 @@
 package com.example.second;
 
-// import com.example.first.First; // 2a
+// import com.example.first.First;
 
 public class Second {
 
     public static void main(String[] args) {
         System.out.println("Starting second..."); // 1
 
-        // 2a
-        // First first = new First(); // with requires static, this will compile but this will not run!
-        // System.out.println("First info: " + first.getInfo());
+        // 2
+        // First first = new First(); // with requires static, this will compile but this will not run! requires static is a compile time dependency only; somethng like provided in maven
+        // System.out.printf("First says: %s%n", first.getInfo());
+        // System.out.printf("Second.class.getModule(): %s%n", Second.class.getModule());
 
-        // 2b
-        // System.out.println("Second.class.getModule() is: " + Second.class.getModule());
-        // System.out.println();
-
-        // or use: (when demoing removal of jar at runtime)
+        // 5
         // new com.example.second.helper.Util().doeIets();
     }
 

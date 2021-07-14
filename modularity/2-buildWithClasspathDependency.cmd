@@ -3,31 +3,32 @@ REM classic style without module-info.java but with dependency and therefore -cp
 rmdir /Q /S output\mlib
 mkdir output\mlib
 
+REM compile and build first
 mkdir output\classes
 dir /s /B first\*.java > sources.txt
 javac -d output/classes @sources.txt
-jar -c -f output/mlib/first.jar -C output/classes .
+jar -c -f output/mlib/firstauto.jar -C output/classes .
 rmdir /Q /S output\classes
 del sources.txt
 
+REM compile and build second with first on the classpath
 mkdir output\classes
 dir /s /B second\*.java > sources.txt
-javac -d output/classes -cp output\mlib\first.jar @sources.txt
+javac -d output/classes -cp output\mlib\firstauto.jar @sources.txt
 jar -c -f output/mlib/secondauto.jar -C output/classes .
 rmdir /Q /S output\classes
 del sources.txt
 
+REM when running classic dependent jars in the classpath with -cp, jars live in one happy family module called unnamed
 echo -------------- Running in the classpath ------------------------------------
-java -cp output\mlib\first.jar;output\mlib\secondauto.jar com.example.second.Second 
+java -cp output\mlib\firstauto.jar;output\mlib\secondauto.jar com.example.second.Second
 
+REM when running classic dependent jars in the modulepath with -p, jar becomes an automatic module with name == jar name
+REM prefix main class with (automatic) module name
+REM with -p, you don't have to list all the jars anymore, just provide the path
 echo -------------  Running in the modulepath using automatic module name -------
 java -p output\mlib -m secondauto/com.example.second.Second
 
-REM when running classic jar in the modulepath, jar becomes module with automatic name == jar name
-REM for java.exe prefix main class with automatic module name
-
-REM -d examines metadata of module graph (2b)
-echo --- Module data of first is: ---
-jar -f output\mlib\first.jar -d 
-echo --- Module data of second is: ---
-jar -f output\mlib\secondauto.jar -d 
+REM when combined, classpath jars live in unnamed, module path classic jars live in a (automatic) module
+echo -------------  Running one in the classpath and the other in the modulepath  -------
+java -p output\mlib\secondauto.jar -cp output\mlib\firstauto.jar -m secondauto/com.example.second.Second

@@ -1,3 +1,3 @@
 // module secondnamed { // 3a
-//     // requires /*3b3:*/ /*static*/  firstnamed; //3b1
+//     requires /*3b3:*/ /*static*/ firstnamed; //3b1
 // }
