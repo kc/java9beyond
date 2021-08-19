@@ -23,7 +23,7 @@
 		- Q: How can I make my apps modular?
             a. eerst een module-info without requires/exports --> Compile error!
             b. now with requires (1), then exports (2), then static (3)
-            c. now try to use first.Internal in second --> Compile error! --> comment out
+            c. now try to use first.Internal in second --> Compile error! --> add "exports ... to ..." (or comment)
             d. show-module-graph.cmd
 	4. tonen/runnen without intermediary jar (4-...cmd)
 	    - Q: can I build a module directly without intermediary jar?
