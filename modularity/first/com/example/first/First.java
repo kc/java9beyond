@@ -6,7 +6,7 @@ public class First {
         String s2 = "\nFirst.class.getModule() is: " + First.class.getModule(); // 2
 
         return s1
-                // + s2 // 2
+                + s2 // 2
                 ;
     }
 
