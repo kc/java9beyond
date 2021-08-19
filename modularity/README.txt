@@ -1,6 +1,6 @@
 - Demo first en second maken (bron: Java 9 and beyond (Venkat S.), modules: https://youtu.be/oRcOiGWK9Ts?t=5121)
 
-	1. build zonder module en  dependency (1-..cmd) en run in classpath met java 9+:
+	1. build en run second zonder module en zonder dependency (1-..cmd) en run in classpath met java 9+:
 	    - Q: kan dit wel zonder modules?
 	    - A: ja, backwards compatible.
 	    - toon ook java --list-modules
