@@ -1,6 +1,6 @@
 package com.example.second;
 
-// import com.example.first.First;
+// import com.example.first.First; // 2
 // import com.example.first.internal.Internal;
 
 public class Second {

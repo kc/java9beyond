@@ -31,7 +31,5 @@ java -p output\mlib -m secondauto/com.example.second.Second
 
 REM when combined, classpath jars live in unnamed, module path classic jars live in a (automatic) module
 echo -------------  Running first in the classpath and second in the modulepath  -------
-java -p output\mlib -cp output\mlib\firstauto.jar -m secondauto/com.example.second.Second
-
-echo -------------  Running second in the classpath and first in the modulepath  -------
-java -p output\mlib -cp output\mlib\secondauto.jar -m secondauto/com.example.second.Second
+move output\mlib\firstauto.jar output
+java -cp output\firstauto.jar -p output\mlib -m secondauto/com.example.second.Second

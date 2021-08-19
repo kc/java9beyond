@@ -3,14 +3,6 @@ REM classic style sources without module-info.java
 rmdir /Q /S output\mlib
 mkdir output\mlib
 
-REM compile and build first
-mkdir output\classes
-dir /s /B first\*.java > sources.txt
-javac -d output/classes @sources.txt
-jar -c -f output/mlib/first.jar -C output/classes .
-rmdir /Q /S output\classes
-del sources.txt
-
 REM compile and build second
 mkdir output\classes
 dir /s /B second\*.java > sources.txt
