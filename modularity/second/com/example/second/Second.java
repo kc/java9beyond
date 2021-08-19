@@ -1,6 +1,6 @@
 package com.example.second;
 
-// import com.example.first.First; // 2
+// import com.example.first.First;
 // import com.example.first.internal.Internal;
 
 public class Second {
@@ -13,6 +13,7 @@ public class Second {
         // System.out.printf("First says: %s%n", first.getInfo());
         // System.out.printf("Second.class.getModule(): %s%n", Second.class.getModule());
 
+        // 3c
         // Internal internal = new Internal();
         // internal.getInfo();
 

@@ -1,5 +1,10 @@
 @echo off
 
-REM run 1-buildSeparate.cmd first to make this work!
+REM run jlink-build.cmd first to make this work!
 
-.\output\my-jlink-image\bin\java.exe -cp .\output\mlib\second.jar com.example.second.Second
+echo -------------- Running jlink image ------------------------------------
+.\output\my-jlink-image\bin\java.exe -p .\output\mlib -m secondnamed/com.example.second.Second
+
+REM or
+REM echo -------------- Running jlink image with launcher ----------------------
+REM .\output\my-jlink-image\bin\start.bat
