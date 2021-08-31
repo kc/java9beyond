@@ -29,7 +29,7 @@
 	    - Q: can I build a module directly without intermediary jar?
 	    - A: yes, but the module name in module-info should the match directory name then
 	5. fail fast
-	    Q: what happens when a dependency (as module) is not available?
+	    Q: what happens when a dependency (as module) is not available (at runtime)?
 	    A: vroeger: at runtime een crash, pas als de foute code uitgevoerd wordt
            nu: tijdens opstarten app second al meteen een fout
         Demo:
